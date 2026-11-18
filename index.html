@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>STI ग्रामीण सहायक · IIT जोधपुर</title>
+<meta name="description" content="IIT जोधपुर STI Hub की मुफ़्त ट्रेनिंग, मशीनें, पानी फ़िल्टर और मटका सिंचाई की जानकारी — गाँव वालों के लिए।">
+<meta name="theme-color" content="#1f2a5a">
+<link rel="manifest" href="manifest.json">
+<style>
+:root{--ink:#1d2433;--indigo:#1f2a5a;--gold:#f2a900;--rose:#b5246b;--leaf:#1d7a4d;--bg:#f3f5fa;--line:#d5dae8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font:19px/1.6 "Noto Sans Devanagari",Mukta,system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+body.en .hi,body:not(.en) .en{display:none!important}
+header{position:sticky;top:0;z-index:5;background:var(--indigo);color:#fff;display:flex;align-items:center;gap:10px;padding:8px 14px}
+header b{flex:1;font-size:1.05rem}
+button,.btn{font:inherit;min-height:52px;padding:10px 18px;border-radius:12px;border:2px solid var(--indigo);background:#fff;color:var(--indigo);font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+header button{min-height:44px;border-color:var(--gold);background:var(--gold);color:#1d2433}
+.btn.pri{background:var(--rose);border-color:var(--rose);color:#fff}
+:focus-visible{outline:4px solid var(--gold);outline-offset:2px}
+main{max-width:920px;margin:auto;padding:0 14px 40px}
+section{padding:28px 0 8px}
+h1{font-size:2rem;line-height:1.25;margin:0 0 10px;color:var(--indigo)}
+h2{font-size:1.5rem;margin:0 0 6px;color:var(--indigo);border-left:8px solid var(--gold);padding-left:10px}
+.lead{font-size:1.15rem}
+.hero{background:var(--indigo);color:#fff;margin:0 -14px;padding:26px 14px 30px;border-bottom:8px solid var(--gold)}
+.hero h1{color:#fff}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px}
+.tile{background:#fff;color:var(--ink);border-radius:16px;padding:16px;text-decoration:none;border:2px solid transparent;min-height:130px}
+.tile:hover{border-color:var(--gold)}
+.tile i{font-style:normal;font-size:2.2rem;display:block}
+.tile b{display:block;font-size:1.15rem;color:var(--indigo)}
+.tile small{font-size:.9rem;color:#4a5370}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin:14px 0}
+.card h3{margin:0 0 4px;font-size:1.25rem;color:var(--indigo)}
+.card ul{padding-left:22px;margin:8px 0}
+.tag{display:inline-block;background:#fff3cf;border:1px solid var(--gold);border-radius:20px;padding:0 12px;font-size:.9rem;font-weight:700;margin:0 6px 6px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.chips button[aria-pressed=true]{background:var(--indigo);color:#fff}
+.vil{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0;padding:0;list-style:none}
+.vil li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-weight:600}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.facts div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center}
+.facts b{display:block;font-size:1.9rem;color:var(--rose)}
+.steps{counter-reset:s;list-style:none;padding:0}
+.steps li{counter-increment:s;position:relative;padding:6px 0 10px 54px}
+.steps li:before{content:counter(s);position:absolute;left:0;top:4px;width:40px;height:40px;border-radius:50%;background:var(--gold);font-weight:800;display:grid;place-items:center}
+label{display:block;font-weight:700;margin:12px 0 4px}
+input,select{font:inherit;width:100%;min-height:52px;padding:8px 12px;border:2px solid var(--line);border-radius:12px;background:#fff}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.say{min-height:40px;padding:4px 12px;font-size:.9rem;float:right;margin-left:8px}
+footer{background:var(--indigo);color:#dfe4f5;padding:22px 14px;font-size:.9rem}
+footer a{color:var(--gold)}
+#note{font-size:.95rem;color:#4a5370}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <b>STI ग्रामीण सहायक</b>
+  <button id="lang" aria-label="भाषा बदलें / Change language">English</button>
+</header>
+<main>
+
+<section class="hero" id="top">
+  <h1><span class="hi">अपने गाँव में काम, साफ़ पानी और खेती के लिए<br>IIT जोधपुर की मदद</span><span class="en">Work, clean water and farming help for your village from IIT Jodhpur</span></h1>
+  <p class="lead"><span class="hi">STI Hub, IIT जोधपुर पाँच ज़िलों — जोधपुर, बाड़मेर, जैसलमेर, बीकानेर, नागौर — के गाँवों में मुफ़्त ट्रेनिंग और मशीनें देता है। यहाँ जानिए आपके लिए क्या है और कैसे जुड़ें।</span><span class="en">The STI Hub at IIT Jodhpur gives training and equipment in villages across five districts: Jodhpur, Barmer, Jaisalmer, Bikaner and Nagaur. See what is there for you and how to join.</span></p>
+  <div class="row"><a class="btn pri" href="#join"><span class="hi">✋ मैं जुड़ना चाहता/चाहती हूँ</span><span class="en">✋ I want to join</span></a>
+  <button class="say" style="float:none" data-say="top"><span class="hi">🔊 सुनें</span><span class="en">🔊 Listen</span></button></div>
+  <div class="tiles">
+    <a class="tile" href="#rope"><i>🧶</i><b><span class="hi">रस्सी व हाथ का काम</span><span class="en">Rope &amp; crafts</span></b><small><span class="hi">घर बैठे कमाई</span><span class="en">Earn from home</span></small></a>
+    <a class="tile" href="#water"><i>💧</i><b><span class="hi">साफ़ पीने का पानी</span><span class="en">Clean drinking water</span></b><small><span class="hi">जी-फ़िल्टर</span><span class="en">G-filter</span></small></a>
+    <a class="tile" href="#sspv"><i>🌱</i><b><span class="hi">मटका सिंचाई</span><span class="en">Pot irrigation</span></b><small><span class="hi">कम पानी में सब्ज़ी</span><span class="en">Vegetables with little water</span></small></a>
+    <a class="tile" href="#hut"><i>🛖</i><b><span class="hi">गोबर-मिट्टी का घर</span><span class="en">Dung &amp; mud hut</span></b><small><span class="hi">कचरे से निर्माण</span><span class="en">Building from waste</span></small></a>
+  </div>
+</section>
+
+<section id="village">
+  <h2><span class="hi">मेरे ज़िले में कहाँ काम हुआ?</span><span class="en">Where has work happened near me?</span></h2>
+  <p><span class="hi">अपना ज़िला चुनिए। रिपोर्ट में दर्ज गाँव/केंद्र नीचे दिखेंगे — अपने नज़दीकी गाँव से पूछताछ करें।</span><span class="en">Pick your district to see villages and centres named in the reports. Ask at the one nearest to you.</span></p>
+  <div class="chips" id="dist" role="group"></div>
+  <ul class="vil" id="vil" aria-live="polite"></ul>
+  <p id="note"><span class="hi">ध्यान दें: सूची 2023-24 और 2024-25 की रिपोर्ट से है। नए केंद्र जुड़ सकते हैं — सबसे सही जानकारी के लिए नीचे संपर्क करें।</span><span class="en">Note: this list is from the 2023-24 and 2024-25 reports. New centres may be added; contact the team below to confirm.</span></p>
+</section>
+
+<section id="rope">
+  <h2><span class="hi">रस्सी व हाथ के काम की ट्रेनिंग</span><span class="en">Rope and craft training</span></h2>
+  <div class="card">
+    <button class="say" data-say="rope"><span class="hi">🔊 सुनें</span><span class="en">🔊 Listen</span></button>
+    <p><span class="hi">मशीन (हाथ वाली और बिजली वाली रट्ट) से रस्सी बनाना आसान होता है, मेहनत कम लगती है। स्थानीय रेशे और पुराने कपड़े से बिकने वाला सामान बनता है।</span><span class="en">Manual and electric ratts make rope-making easier and less tiring. Local fibre and old cloth become products that sell.</span></p>
+    <h3><span class="hi">क्या बना सकते हैं</span><span class="en">What you can make</span></h3>
+    <span class="tag"><span class="hi">गलियारा मैट</span><span class="en">Corridor mat</span></span><span class="tag"><span class="hi">रिंग मैट</span><span class="en">Ring mat</span></span><span class="tag"><span class="hi">कॉयर बैग</span><span class="en">Coir bag</span></span><span class="tag"><span class="hi">वॉल हैंगिंग</span><span class="en">Wall hanging</span></span><span class="tag"><span class="hi">चाय कोस्टर</span><span class="en">Tea coaster</span></span><span class="tag"><span class="hi">नर्सरी पाउच</span><span class="en">Nursery pouch</span></span><span class="tag"><span class="hi">पर्दे की डोरी</span><span class="en">Curtain tie</span></span><span class="tag"><span class="hi">गर्दन तकिया (बुई/आकड़ा)</span><span class="en">Neck pillow (bui / akada)</span></span><span class="tag"><span class="hi">पेड़ गार्ड (जियो-टेक्सटाइल)</span><span class="en">Tree guard (geotextile)</span></span>
+  </div>
+  <div class="card">
+    <h3><span class="hi">ट्रेनिंग से कमाई तक — रास्ता</span><span class="en">From training to earning</span></h3>
+    <ol class="steps">
+      <li><span class="hi">6 महीने की स्किल ट्रेनिंग।</span><span class="en">6 months of skill training.</span></li>
+      <li><span class="hi">3 महीने एक-एक करके क्वालिटी सत्र — बाज़ार लायक सामान बनाना।</span><span class="en">3 months of one-on-one quality sessions to make market-ready goods.</span></li>
+      <li><span class="hi">भारत सरकार (विकास आयुक्त, हस्तशिल्प) का <b>आर्टिज़न कार्ड</b> बनवाना। 2024-25 में 35 प्रशिक्षुओं को कार्ड मिला।</span><span class="en">Register for the <b>Artisan Card</b> from the Development Commissioner (Handicrafts), Govt. of India. 35 trainees received it in 2024-25.</span></li>
+      <li><span class="hi">बेचना: नर्सरी (अज्जू नर्सरी, ऑर्गेनिक नर्सरी – जोधपुर), ऑनलाइन (Market Mirchi ऐप, kalanubhav.in) और मेले। शिल्प समागम मेले में 9 दिन में ₹11,000 से ज़्यादा की बिक्री हुई।</span><span class="en">Sell through nurseries (Ajju Nursery, Organic Nursery, Jodhpur), online (Market Mirchi app, kalanubhav.in) and fairs. At the Shilp Samagam Mela, sales crossed ₹11,000 in 9 days.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="water">
+  <h2><span class="hi">जी-फ़िल्टर: सस्ता साफ़ पानी</span><span class="en">G-filter: affordable clean water</span></h2>
+  <div class="card">
+    <button class="say" data-say="water"><span class="hi">🔊 सुनें</span><span class="en">🔊 Listen</span></button>
+    <p><span class="hi">मिट्टी का फ़िल्टर जो गाँव में ही बन सकता है। कुम्हार समुदाय को मशीन और ट्रेनिंग दी गई है, ताकि फ़िल्टर गाँव में बने और सस्ता मिले। तीन स्कूलों में, जहाँ अनुसूचित जाति के बच्चे ज़्यादा हैं, UF फ़िल्टर भी लगे हैं (जल जीवन मिशन की दिशा में)।</span><span class="en">A ceramic filter that can be made locally. Potter communities received machines and training so filters are made in the village at low cost. UF filters were also installed in three schools with many SC students (a step towards the Jal Jeevan Mission).</span></p>
+    <p><b><span class="hi">कुम्हार भाइयों के लिए:</span><span class="en">For potters:</span></b> <span class="hi">जी-फ़िल्टर बनाने की मशीन और ट्रेनिंग के लिए नीचे संपर्क करें।</span><span class="en">contact us below for the filter-making machine and training.</span></p>
+  </div>
+</section>
+
+<section id="sspv">
+  <h2><span class="hi">मटका (SSPV) सिंचाई: कम पानी, ज़्यादा सब्ज़ी</span><span class="en">Pot (SSPV) irrigation: more vegetables, less water</span></h2>
+  <div class="card">
+    <button class="say" data-say="sspv"><span class="hi">🔊 सुनें</span><span class="en">🔊 Listen</span></button>
+    <p><span class="hi">ज़मीन में दबाया गया मिट्टी का बर्तन (सब-सरफ़ेस पोरस वेसल)। पानी सीधे पौधे की जड़ तक पहुँचता है।</span><span class="en">A clay vessel buried in the soil (Sub-Surface Porous Vessel). Water goes straight to the plant roots.</span></p>
+    <ul>
+      <li><span class="hi">पानी का वाष्पीकरण नहीं — रेगिस्तान के लिए बढ़िया।</span><span class="en">No evaporation loss, ideal for the desert.</span></li>
+      <li><span class="hi">मिट्टी में नमी ज़्यादा देर टिकती है।</span><span class="en">Soil stays moist for longer.</span></li>
+      <li><span class="hi">चलाने के लिए बिजली या ईंधन की ज़रूरत नहीं।</span><span class="en">No electricity or fuel needed.</span></li>
+      <li><span class="hi">घर के आँगन की सब्ज़ी से परिवार का पोषण बढ़ता है।</span><span class="en">Backyard vegetables improve family nutrition.</span></li>
+    </ul>
+    <p><span class="hi">इसी मशीन से जी-फ़िल्टर भी बनता है — बस मिट्टी का अनुपात अलग होता है। 2024-25 में 82 लोगों/समूहों को उपकरण मिले।</span><span class="en">The same machine makes G-filters; only the clay mix differs. In 2024-25, 82 beneficiaries received equipment.</span></p>
+  </div>
+</section>
+
+<section id="hut">
+  <h2><span class="hi">गोबर-मिट्टी से टिकाऊ घर</span><span class="en">Durable huts from dung and mud</span></h2>
+  <div class="card"><button class="say" data-say="hut"><span class="hi">🔊 सुनें</span><span class="en">🔊 Listen</span></button>
+    <p><span class="hi">पुराने ढंग की झोपड़ी को गोबर, मिट्टी और प्राकृतिक रेशे से नए तरीके से बनाना सिखाया गया। STI का नया दफ़्तर इसी से बना है — कचरे से धन मिशन के अनुरूप।</span><span class="en">Traditional hut-building was revived with dung, mud and natural fibre, and people were trained in it. The new STI office is built this way, in line with the waste-to-wealth mission.</span></p></div>
+</section>
+
+<section id="numbers">
+  <h2><span class="hi">अब तक का काम</span><span class="en">Work so far</span></h2>
+  <div class="facts">
+    <div><b>890</b><span class="hi">रस्सी प्रशिक्षु (2023-24)</span><span class="en">rope trainees (2023-24)</span></div>
+    <div><b>99 + 88</b><span class="hi">रस्सी उपकरण लाभार्थी (23-24 + 24-25)</span><span class="en">rope equipment (23-24 + 24-25)</span></div>
+    <div><b>102</b><span class="hi">पानी फ़िल्टर उपकरण (2023-24)</span><span class="en">filter equipment (2023-24)</span></div>
+    <div><b>35</b><span class="hi">आर्टिज़न कार्ड (2024-25)</span><span class="en">Artisan Cards (2024-25)</span></div>
+  </div>
+</section>
+
+<section id="join">
+  <h2><span class="hi">जुड़ने के लिए जानकारी भेजें</span><span class="en">Send your details to join</span></h2>
+  <div class="card">
+    <p><span class="hi">भरिए, फिर ईमेल या संदेश भेजिए। STI टीम आपसे संपर्क करेगी।</span><span class="en">Fill in, then send by email or message. The STI team will contact you.</span></p>
+    <label for="n"><span class="hi">आपका नाम</span><span class="en">Your name</span></label><input id="n" autocomplete="name">
+    <label for="p"><span class="hi">फ़ोन नंबर</span><span class="en">Phone number</span></label><input id="p" type="tel" inputmode="numeric" autocomplete="tel">
+    <label for="v"><span class="hi">गाँव</span><span class="en">Village</span></label><input id="v">
+    <label for="d"><span class="hi">ज़िला</span><span class="en">District</span></label><select id="d"></select>
+    <label for="i"><span class="hi">किसमें रुचि है?</span><span class="en">What are you interested in?</span></label>
+    <select id="i"></select>
+    <div class="row">
+      <a class="btn pri" id="mail" href="#"><span class="hi">✉️ ईमेल से भेजें</span><span class="en">✉️ Send by email</span></a>
+      <a class="btn" id="wa" href="#" hidden><span class="hi">💬 WhatsApp</span><span class="en">💬 WhatsApp</span></a>
+      <button id="copy"><span class="hi">📋 संदेश कॉपी करें</span><span class="en">📋 Copy message</span></button>
+    </div>
+    <p id="msg" role="status"></p>
+    <p id="note2"><span class="hi">संपर्क: stih@cetsd.iitj.ac.in · IIT जोधपुर (केंद्र: Emerging Technologies for Sustainable Development)</span><span class="en">Contact: stih@cetsd.iitj.ac.in · IIT Jodhpur (Centre for Emerging Technologies for Sustainable Development)</span></p>
+  </div>
+</section>
+</main>
+<footer>
+  <span class="hi">यह IIT जोधपुर के छात्रों <b>सनी मीणा</b> और <b>आर्यन दहिया</b> का DC प्रोजेक्ट है, जो STI Hub की वार्षिक रिपोर्ट (2023-24, 2024-25) पर आधारित है। यह STI Hub की आधिकारिक वेबसाइट नहीं है। लाभार्थियों के नाम/फ़ोन गोपनीयता के कारण नहीं दिखाए गए हैं।</span>
+  <span class="en">A DC project by IIT Jodhpur students <b>Sunny Meena</b> and <b>Aaryan Dahiya</b>, based on the STI Hub annual reports (2023-24, 2024-25). Not the official STI Hub website. Beneficiary names and phone numbers are left out for privacy.</span>
+</footer>
+<script>
+// ---- Edit these two lines after confirming with the STI team ----
+const CONFIG={email:"stih@cetsd.iitj.ac.in",whatsapp:""}; // e.g. "919XXXXXXXXX"
+const D={
+ "जोधपुर|Jodhpur":["बनाड़|Banar","भावड़|Bhawad","मोकलावास|Mokalawas","नांदिया कलां|Nandiya Kallan","अरना झरना|Arna Jharna","दैजर|Daijar","पीपाड़|Pipar","पाल|Pal","रोहिला कलां|Rohilla Kallan","मथानिया|Mathaniya","बैठवासिया|Baithwasiya","हीरादेसर|Hiradesar","झीपासनी|Jheepasani","सांगरिया|Sangariya","सुरपुरा|Surpura","करवड़|Karwar","घड़ाव|Ghadaav"],
+ "जैसलमेर|Jaisalmer":["गोमट|Gomat","सुल्ताना|Sultana","अर्जुना|Arjuna","थाट|That","खारा|Khara"],
+ "बाड़मेर|Barmer":["कोरना|Korna","हरसाणी|Harsani","गडरा|Gadra","सजियाली|Sajiyali","बनियावास|Baniyawas"],
+ "बीकानेर|Bikaner":["भरूखीरा|Bharukhira","हुसंगसर|Husangsar","भैरूपावा|Bharupava","शोभासर|Shobasar","जालवाली|Jalwali","ककू|Kakoo","उदासर|Udasar"],
+ "नागौर|Nagaur":["नगरी|Nagri","पचला सिद्धा|Pachala Sidha"]};
+const I=["रस्सी / हाथ का काम ट्रेनिंग|Rope / craft training","जी-फ़िल्टर (कुम्हार)|G-filter (potters)","मटका सिंचाई|Pot irrigation (SSPV)","गोबर-मिट्टी घर|Dung-mud hut","आर्टिज़न कार्ड मदद|Artisan Card help","सामान बेचने में मदद|Help selling products"];
+const $=s=>document.querySelector(s),en=()=>document.body.classList.contains("en");
+const t=s=>s.split("|")[en()?1:0];
+function render(){
+  const keys=Object.keys(D);
+  $("#dist").innerHTML=keys.map((k,i)=>`<button aria-pressed="${i==sel}" data-i="${i}">${t(k)}</button>`).join("");
+  $("#vil").innerHTML=D[keys[sel]].map(v=>`<li>${t(v)}</li>`).join("");
+  const dv=$("#d").value;$("#d").innerHTML=keys.map(k=>`<option>${t(k)}</option>`).join("");$("#d").selectedIndex=sel;
+  const iv=$("#i").selectedIndex;$("#i").innerHTML=I.map(x=>`<option>${t(x)}</option>`).join("");$("#i").selectedIndex=Math.max(iv,0);
+  build();
+}
+let sel=0;
+$("#dist").onclick=e=>{const b=e.target.closest("button");if(b){sel=+b.dataset.i;render();}};
+$("#d").onchange=()=>{sel=$("#d").selectedIndex;render();};
+function text(){return `नमस्ते STI Hub, IIT जोधपुर / Hello STI Hub, IIT Jodhpur\nनाम / Name: ${$("#n").value}\nफ़ोन / Phone: ${$("#p").value}\nगाँव / Village: ${$("#v").value}\nज़िला / District: ${$("#d").value}\nरुचि / Interest: ${$("#i").value}`}
+function build(){
+  const x=encodeURIComponent(text());
+  $("#mail").href=`mailto:${CONFIG.email}?subject=${encodeURIComponent("STI Hub से जुड़ना चाहता हूँ / Interested in joining")}&body=${x}`;
+  if(CONFIG.whatsapp){$("#wa").hidden=false;$("#wa").href=`https://wa.me/${CONFIG.whatsapp}?text=${x}`;}
+}
+["n","p","v","i"].forEach(id=>$("#"+id).addEventListener("input",build));
+$("#copy").onclick=async()=>{try{await navigator.clipboard.writeText(text());$("#msg").textContent=en()?"Copied. Paste it in WhatsApp or SMS.":"कॉपी हो गया। WhatsApp या SMS में चिपकाइए।";}catch{$("#msg").textContent=text();}};
+$("#lang").onclick=()=>{document.body.classList.toggle("en");document.documentElement.lang=en()?"en":"hi";$("#lang").textContent=en()?"हिंदी":"English";speechSynthesis&&speechSynthesis.cancel();render();};
+document.addEventListener("click",e=>{
+  const b=e.target.closest(".say");if(!b||!window.speechSynthesis)return;
+  speechSynthesis.cancel();
+  const box=b.closest(".card")||b.closest("section");
+  const clone=box.cloneNode(true);clone.querySelectorAll(".say,button,a.btn").forEach(n=>n.remove());
+  clone.querySelectorAll(en()?".hi":".en").forEach(n=>n.remove());
+  const u=new SpeechSynthesisUtterance(clone.textContent.replace(/\s+/g," "));u.lang=en()?"en-IN":"hi-IN";u.rate=.9;speechSynthesis.speak(u);
+});
+render();
+if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
+</script>
+</body>
+</html>
